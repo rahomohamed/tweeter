@@ -1,0 +1,24 @@
+form textarea {
+  border: none;
+  border-bottom: 5px solid black;
+  background-color: #ff99aa;
+  width: 100%;
+}
+
+input {
+  border: none;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 5px;
+  font-family:'Bungee';
+  background-color: #ff528f;
+  padding: 0px 10px;
+   
+}
+
+.counter {
+float: right;
+color: #ff528f;
+font-family:'Bungee';
+}

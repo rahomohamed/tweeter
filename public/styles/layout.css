@@ -12,15 +12,14 @@ html {
 
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: white;
+  background-color: #ff99aa;
   font-size: 24px;
   font-family: 'Source Sans Pro' ;
 }
 
 main {
 width: 90%;
-  background-color: #f4f1ec;
+  background-color: #ff99aa;
   margin: 5% 5%;
-  padding: 10px 10px 10px 10px;
 }
