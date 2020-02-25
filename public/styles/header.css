@@ -1,0 +1,8 @@
+.profile {
+position: relative;
+height: 400px;
+width: 100%;
+background-color: #ffaa00;
+background-image: url("https://www.transparenttextures.com/patterns/food.png");
+text-align: center;
+}

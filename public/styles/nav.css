@@ -1,0 +1,38 @@
+nav {
+  align-items: center;
+  background-color: #4056A1;
+  color: #FFFF;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  padding: 1.5em;
+  position: relative;
+  top: 0;
+  width: 100vw;
+  z-index: 10000;
+}
+
+nav .newTweetButton {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+nav .newTweetButton h2 {
+  margin: 0;
+}
+  
+  
+  nav span {
+    font-family: 'Bungee';
+    font-size: 40px;
+  }
+  
+  #writeTweet {
+    float: right;
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    font-size: 30px;
+    font-weight: 400;
+  }

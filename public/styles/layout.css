@@ -10,16 +10,17 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro' ;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+main {
+width: 90%;
+  background-color: #f4f1ec;
+  margin: 5% 5%;
+  padding: 10px 10px 10px 10px;
+}
