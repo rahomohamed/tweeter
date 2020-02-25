@@ -1,6 +1,6 @@
 form textarea {
   border: none;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #585959;
   background-color: #ff99aa;
   width: 100%;
 }
