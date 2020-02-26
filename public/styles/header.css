@@ -2,7 +2,9 @@
 position: relative;
 height: 400px;
 width: 100%;
-background-color:#ff99aa;
+background-color: #a8a3ff;
 background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
 text-align: center;
+top: 50%;
+margin-top: 120px; 
 }

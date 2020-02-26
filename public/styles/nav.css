@@ -1,12 +1,12 @@
 nav {
+  position: fixed;
   align-items: center;
-  background-color: #ff99aa;
-  color: #ff528f;
+  background-color: #aedff5;
+  color: #9f43fa;
   display: flex;
   justify-content: space-between;
   height: 120px;
   padding: 1.5em;
-  position: relative;
   top: 0;
   width: 100vw;
   z-index: 10000;

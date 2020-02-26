@@ -1,9 +1,10 @@
 form textarea {
   border: none;
   border-bottom: 5px solid #585959;
-  background-color: #ff99aa;
+  background-color: #a8a3ff;
   width: 100%;
 }
+
 
 input {
   border: none;
@@ -12,13 +13,13 @@ input {
   line-height: 40px;
   padding: 0 5px;
   font-family:'Bungee';
-  background-color: #ff528f;
+  background-color: #9f43fa;
   padding: 0px 10px;
    
 }
 
 .counter {
 float: right;
-color: #ff528f;
+color:  #9f43fa;
 font-family:'Bungee';
 }
