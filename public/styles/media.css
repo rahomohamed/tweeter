@@ -1,0 +1,26 @@
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: stretch;
+    margin-top: 100px;
+    padding-right: 5px;
+  }
+
+  .container {
+    padding-top: 35px;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  header.profile {
+    margin-top: 0px;
+    height: initial;
+  }
+
+  .picture {
+    width: 300px;
+    height: auto;
+    margin-top: 150px;
+  }
+}
