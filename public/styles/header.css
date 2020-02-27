@@ -8,3 +8,15 @@ text-align: center;
 top: 50%;
 margin-top: 120px; 
 }
+
+.picture {
+  width: 250px;
+  height: auto;
+  margin-top: 40px;
+  opacity: 0.9;
+  margin-bottom: -35px;
+}
+
+.name {
+  color: #9f43fa;
+}
