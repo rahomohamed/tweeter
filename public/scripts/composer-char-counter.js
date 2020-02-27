@@ -1,7 +1,5 @@
 $(document).ready(function() {
-  console.log("this");
-$('.new-tweet textarea').on('keypress', function() {
-  console.log('this');
+$('.new-tweet textarea').on('input', function() {
 let input = $(this).val().length; // whatever you are typing in
 let maxChar = 140;
 let remainingChar = maxChar - input;

@@ -36,3 +36,22 @@ nav .newTweetButton h2 {
     font-size: 30px;
     font-weight: 400;
   }
+
+.button {
+    margin-top: 5px;
+    animation-name: button;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+    color: #9f43fa;
+}
+
+@keyframes button {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.button:hover {
+cursor: pointer;
+}

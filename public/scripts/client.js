@@ -1,6 +1,16 @@
-
-
 $(document).ready(function() {
+  
+
+  $("i").click(function() {
+  $("#tweet-button").slideToggle()
+    });
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+  
 const createTweetElement = function(tweetData) {
 return`<article class="tweet">
 <header>
@@ -10,7 +20,7 @@ return`<article class="tweet">
   </div>
   <p class="username">${tweetData.user.handle}</p>
 </header>
-<p class="words">${tweetData.content.text}</p>
+<p class="words">${escape(tweetData.content.text)}</p>
 <footer>
   <div class="bottom-info">
     <p class="days-passed">10 days ago</p>
@@ -24,31 +34,6 @@ return`<article class="tweet">
 </article>`
 }
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
 
 const renderTweets = function(tweets) {
   for (let tweet of tweets) {
@@ -56,7 +41,57 @@ const renderTweets = function(tweets) {
   }
 }
 
-renderTweets(data);
+const loadTweets = function() {
+$.ajax({
+url: '/tweets',
+method: "GET",
+dataType: "JSON"
+})
+.then(response => {
+renderTweets(response)
+});
+}
+loadTweets();
 
+
+
+$(function() {
+  const $form = $('#tweet-button');
+  $form.on('submit', function (event) {
+   $(".error-message").slideUp();
+   $(".error-message").empty();
+
+    event.preventDefault()
+
+    const input = $('.new-tweet textarea');
+    const max = 140;
+    const errors = ["", null];
+    const inputLength = input.val().length
+
+    if(errors.includes(input.val())) {
+      $(".error-message").append("<div style='color:red'> Input required </div>")
+      $(".error-message").slideDown();
+    }
+    else if (inputLength > max) {
+      $(".error-message").append("<div style='color:red'> Tweet must be 140 characters </div>");
+      $(".error-message").slideDown();
+
+    } else {
+   $.ajax({
+    url: '/tweets',
+    method: "post",
+    data: $form.serialize()
+  })
+    .then(() => {
+    loadTweets(); 
+    input.val("");
+    console.log('success')
+  });
+}
+  
+});
 
 });
+
+});
+

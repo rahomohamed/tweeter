@@ -27,10 +27,13 @@ article.tweet header{
 .username{
   display: none;
 }
+
 article:hover .username{
 display: block;
 opacity: 0.5;
+color:  #9f43fa;
 }
+
 article.tweet .profile-info{
 display: flex;
 flex-direction: row;
