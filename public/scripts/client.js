@@ -1,16 +1,19 @@
 $(document).ready(function() {
   
-
+// toggles tweet button through navigation 
   $("i").click(function() {
-  $("#tweet-button").slideToggle()
+  $("#tweet-button").slideToggle();
+  $("textarea").focus();
     });
 
+// escape untrusted text
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
-  
+
+// create tweet 
 const createTweetElement = function(tweetData) {
 return`<article class="tweet">
 <header>
@@ -33,15 +36,14 @@ return`<article class="tweet">
 </footer>
 </article>`
 }
-
-
+// renders tweets 
 const renderTweets = function(tweets) {
   $("#tweets-container").empty();
   for (let tweet of tweets) {
   $("#tweets-container").prepend(createTweetElement(tweet));
   }
 }
-
+// loads tweets from /tweets
 const loadTweets = function() {
 $.ajax({
 url: '/tweets',
@@ -49,13 +51,13 @@ method: "GET",
 dataType: "JSON"
 })
 .then(response => {
-renderTweets(response)
+renderTweets(response);
 });
 }
 loadTweets();
 
 
-
+// if any errors exist on form do not load page, if they don't exist page loads
 $(function() {
   const $form = $('#tweet-button');
   $form.on('submit', function (event) {
@@ -83,10 +85,13 @@ $(function() {
     method: "post",
     data: $form.serialize()
   })
+  // once tweets is submitted counter is reset back to normal and form is empty again
     .then(() => {
     loadTweets(); 
     input.val("");
-    console.log('success')
+    $(".counter").empty();
+    $(".counter").append("140");
+
   });
 }
   

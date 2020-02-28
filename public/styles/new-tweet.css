@@ -5,6 +5,9 @@ form textarea {
   width: 100%;
 }
 
+form {
+  display:none;
+}
 
 input {
   border: none;

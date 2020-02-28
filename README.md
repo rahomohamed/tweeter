@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot of homepage"](https://github.com/rahomohamed/tinyapp/blob/master/docs/homepage.png)
+!["Screenshot of homepage with form"](https://github.com/rahomohamed/tinyapp/blob/master/docs/toggle.png)
+!["Screenshot of homepage"](https://github.com/rahomohamed/tinyapp/blob/master/docs/responsive.png)
