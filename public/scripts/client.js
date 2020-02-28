@@ -36,6 +36,7 @@ return`<article class="tweet">
 </footer>
 </article>`
 }
+
 // renders tweets 
 const renderTweets = function(tweets) {
   $("#tweets-container").empty();
@@ -85,6 +86,7 @@ $(function() {
     method: "post",
     data: $form.serialize()
   })
+  
   // once tweets is submitted counter is reset back to normal and form is empty again
     .then(() => {
     loadTweets(); 

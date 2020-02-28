@@ -18,6 +18,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of homepage"](https://github.com/rahomohamed/tinyapp/blob/master/docs/homepage.png)
-!["Screenshot of homepage with form"](https://github.com/rahomohamed/tinyapp/blob/master/docs/toggle.png)
-!["Screenshot of homepage"](https://github.com/rahomohamed/tinyapp/blob/master/docs/responsive.png)
+!["Screenshot of homepage"](https://github.com/rahomohamed/tweeter/blob/master/docs/homepage.png)
+!["Screenshot of homepage with form"](https://github.com/rahomohamed/tweeter/blob/master/docs/toggle.png)
+!["Screenshot of homepage"](https://github.com/rahomohamed/tweeter/blob/master/docs/responsive.png)
